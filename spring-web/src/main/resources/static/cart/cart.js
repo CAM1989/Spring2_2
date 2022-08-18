@@ -21,6 +21,7 @@ angular.module('market-front').controller('cartController', function ($scope, $r
             method: 'POST',
             data: {orderDetailsDto: $scope.orderDetails}
         }).then(function (response) {
+                alert('Ваш заказ успешно сформирован');
                 $scope.loadCart();
                 $scope.orderDetails = null
             });
